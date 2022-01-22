@@ -11,7 +11,7 @@ class Usuario {
         this.direccion = direccion;
     }
     recibir() {
-        alert("Tus datos son" + this.usuario + "y la contraseña es correcta y tu direccion" + this.direccion);
+        alert("Tus datos son " + this.usuario + " y la contraseña es correcta y tu direccion " + this.direccion);
     }
 }
 let usuario1 = new Usuario(prompt("Ingrese su usuario"), prompt("Ingrese su contraseña"), prompt("Ingrese lugar de recepción del pedido"))
