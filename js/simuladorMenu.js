@@ -1,6 +1,6 @@
 let menu1 = prompt("Tu menú es individual? o corporativo?");
 let menu2 = prompt("Preferis menú tradicional, light o vegetariano?");
-    alert("Tu menú es " + menu1 + "y preferis un menú" + menu2);
+    alert("Tu menú es " + menu1 + " y preferis un menú " + menu2);
 //Array de comidas
 const menuLunes = ["Pata mulso al verdeo con puré mixto", "Churrasquito con ensalada", "Rissoto", "Milanesa con ensalada"]
 menuLunes.push("Supremas con ensalada")
@@ -36,3 +36,4 @@ else { switch (dia.toLowerCase()) {
                         alert("Quisiste decir lunes, martes, miercoles, jueves o viernes?");
                 }
 }
+
