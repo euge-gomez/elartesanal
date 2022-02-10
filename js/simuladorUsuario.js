@@ -1,6 +1,4 @@
 let usuario1 = {usuario:document.getElementById("nombre"), direccion:document.getElementById("direccion"), celular:document.getElementById("celular") , contrasenia:document.getElementById("contra").value} 
-<<<<<<< HEAD
-=======
 
 let clickear = document.getElementById("btningresar")
       clickear.addEventListener("click", ingresar)
@@ -13,7 +11,7 @@ function ingresar () {
                         <hr>`
     document.body.appendChild(infodeusuaruio);
 }
->>>>>>> e9dcc5167ebb9a0107f31baa8a3227f898393be7
+
 
 let clickear = document.getElementById("btningresar")
       clickear.addEventListener("click", ingresar)
