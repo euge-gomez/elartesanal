@@ -13,7 +13,6 @@
 <body>
     <header class="head row justify-content-center">
         <a class="logo col-lg-2" href="index.html"><img src="images/logo.jpg" alt="Logo de El Artesanal"></a>
-        <h2 class="col-lg-3">El Artesanal</h2>
         <nav class="navbar navbar-expand-lg navbar-dark col-lg-5">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
@@ -28,13 +27,31 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="extras.html">Otros Servicios</a>
-                  </li>
+                </li>
               </ul>
             </div>
           </nav>
-    </header>
-    <section class="title row">
-        <h1>El Artesanal, comidas caseras</h1>
+    </header class="container">
+      <h1 class="row">El Artesanal, comidas caseras</h1>
+      <h3 class="row">Bienvenido a la página de El Artesanal!</h3>
+      <h3 class="row">Vamos a solicitarte alguna información para incluirte como usuario.</h3>
+    <section>
+      <div class="row">
+        <div class="frame">
+            <form class="form-signin .d-flex" action="" method="post" name="form"> 
+              <label for="username">Usuario</label> 
+              <input id="nombre" class="form-styling" type="text" name="username" placeholder="Ingrese su usuario" />
+              <label for="address">Dirección</label> 
+              <input id="direccion" class="form-styling" type="text" name="address" placeholder="Ingrese su dirección" /> 
+              <label for="phone">Telefóno</label> 
+              <input id="celular" class="form-styling" type="text" name="phone" placeholder="Ingrese su número" /> 
+              <label for="password">Contraseña</label> 
+              <input id="contra" class="form-styling" type="text" name="password" placeholder="Ingrese su contraseña" /> 
+              <button id="btningresar" type="button">Ingresar</button>
+            </form>
+    </section>
+    <section id="userinfo">
+      <!-- Aquí se sumará la info de usuarios -->
     </section>
     <section class="intro row">
         <h2 class="col-lg-5">Nosotros</h2>
