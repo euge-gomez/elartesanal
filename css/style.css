@@ -36,3 +36,9 @@ form {
   border: 2px white solid;
   border-radius: 20px;
 }
+.entradaCantidadCarro {
+  width: 3vw;
+}
+.titulo-carrito {
+  margin-right: 50px;
+}
