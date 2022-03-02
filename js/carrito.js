@@ -30,7 +30,7 @@ function agregarAlCarroClickeado(event) {
                             </div>`;
     carroContenedor.innerHTML = carroContenido;
     carroContenedorMenus.append(carroContenedor);
-/*
+
     //Antes trabajamos para que no se dupliquen los divs del mismo pedido
     const menuEncabezado = carroContenedorMenus.getElementsByClassName('menuTitle');
     for(let i = 0; i < menuEncabezado.length; i++){
@@ -40,7 +40,7 @@ function agregarAlCarroClickeado(event) {
             actualizarTotalCarro()
            return;
         };} // No logro hacerlo funcionar.
-*/  
+
     //Aca nombramos a la funcion que le da funcionalidad al boton X
     carroContenedor.querySelector('.botonEliminar').addEventListener('click', eliminarMenusCarro)
     
@@ -72,6 +72,20 @@ function actualizarTotalCarro(){
 function eliminarMenusCarro(event) {
     const botonAccionado = event.target;
     botonAccionado.closest('.menuAgregado').remove();
+    Toastify({
+        text: "Producto Eliminado",
+        duration: 5000,
+        destination: "https://github.com/apvarun/toastify-js",
+        newWindow: true,
+        close: true,
+        gravity: "bottom",
+        position: "right", 
+        stopOnFocus: true,
+        style: {
+          background: "rgba(0,0,0,0.4)",
+        },
+        onClick: function(){} // Callback after click
+      }).showToast();
     actualizarTotalCarro()
 }
 

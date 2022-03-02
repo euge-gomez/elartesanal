@@ -31,38 +31,56 @@
               </ul>
             </div>
           </nav>
-    </header class="container">
+    </header>
+    <main class="container">
       <h1 class="row">El Artesanal, comidas caseras</h1>
-    <section>
-      <div class="row">
-        <div class="frame">
-            <form class="form-signin .d-flex" action="" method="post" name="form"> 
-              <label for="username">Usuario</label> 
-              <input id="nombre" class="form-styling" type="text" name="username" placeholder="Ingrese su usuario" />
-              <label for="address">Dirección</label> 
-              <input id="direccion" class="form-styling" type="text" name="address" placeholder="Ingrese su dirección" /> 
-              <label for="phone">Telefóno</label> 
-              <input id="celular" class="form-styling" type="text" name="phone" placeholder="Ingrese su número" /> 
-              <label for="password">Contraseña</label> 
-              <input id="contra" class="form-styling" type="text" name="password" placeholder="Ingrese su contraseña" /> 
-              <button id="btningresar" type="button">Ingresar</button>
-            </form>
-    </section>
-    <section id="userinfo">
-      <!-- Aquí se sumará la info de usuarios -->
-    </section>
-    <section class="intro row">
-        <h2 class="col-lg-5">Nosotros</h2>
-        <p class="col-lg-6">Somos un emprendimiento familiar que nació del gusto por servir y cocinar, con una historia de cuidado por nuestros clientes que nos prefieren desde nuestros inicios hace ya varios años y gran pasión por crecer y seguir incorporando servicios. </p>
-    </section>
-    <section class="que row">
-        <h2 class="col-lg-5">¿Qué hacemos?</h2>
-        <p class="col-lg-6">El Artesanal, comenzó realizando sandwiches de miga y pizzas para comercializar en negocios pequeños, luego evolucionamos incluyendo caterings para eventos y menús. Nuestra última novedad, menús para empresas.</p>
-    </section>
-    <section class="donde row">
-        <h2 class="col-lg-5">¿Dónde estamos?</h2>
-        <p class="col-lg-6">El Artesanal, esta localizado en Alberdi a cuadras del centro, pero tiene gran zona de influencia y los extras planificados pueden ser solicitados de cualquier zona de la ciudad.</p>
-    </section>
+      <section class="row">
+        <section class="col-6" id="userinfo">
+          <h3>Tu información de usuario!</h3>
+          <!-- Aquí se sumará la info de usuarios -->
+        </section>
+        <div class="col-6">
+          <div class="frame">
+              <form class="form-signin .d-flex" action="" method="post" name="form"> 
+                <label for="username">Usuario</label> 
+                <input id="nombre" class="form-styling" type="text" name="username" placeholder="Ingrese su usuario" /><br>
+                <label for="address">Dirección</label> 
+                <input id="direccion" class="form-styling" type="text" name="address" placeholder="Ingrese su dirección" /> <br>
+                <label for="phone">Telefóno</label> 
+                <input id="celular" class="form-styling" type="text" name="phone" placeholder="Ingrese su número" /> <br>
+                <label for="password">Contraseña</label> 
+                <input id="contra" class="form-styling" type="text" name="password" placeholder="Ingrese su contraseña" /> <br>
+                <button id="btningresar" type="button">Ingresar</button>
+              </form>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="row">
+          <h1 class="col-3">Como esta el clima hoy?</h1>
+          <form id="busquedaForm" class="col-3">
+            <input id="busquedaInput" type="text" placeholder="Busca tu ciudad">
+            <button type="submit">Buscar</button>
+          </form>
+          <section class="displayClima col-3">
+            <div class="container">
+              <ul class="ciudades"></ul>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="intro row">
+          <h2 class="col-lg-5">Nosotros</h2>
+          <p class="col-lg-6">Somos un emprendimiento familiar que nació del gusto por servir y cocinar, con una historia de cuidado por nuestros clientes que nos prefieren desde nuestros inicios hace ya varios años y gran pasión por crecer y seguir incorporando servicios. </p>
+      </section>
+      <section class="que row">
+          <h2 class="col-lg-5">¿Qué hacemos?</h2>
+          <p class="col-lg-6">El Artesanal, comenzó realizando sandwiches de miga y pizzas para comercializar en negocios pequeños, luego evolucionamos incluyendo caterings para eventos y menús. Nuestra última novedad, menús para empresas.</p>
+      </section>
+      <section class="donde row">
+          <h2 class="col-lg-5">¿Dónde estamos?</h2>
+          <p class="col-lg-6">El Artesanal, esta localizado en Alberdi a cuadras del centro, pero tiene gran zona de influencia y los extras planificados pueden ser solicitados de cualquier zona de la ciudad.</p>
+      </section>
     <footer class="foot row">
         <nav class="navbar navbar-expand-lg navbar-dark col-lg-6">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -83,11 +101,14 @@
             </div>
           </nav>
         <a class="col-lg-1 linkwa justify-content-center" href="https://api.whatsapp.com/send?phone=+5493517424704&text=Hola quiero conocer más sobre los servicios de El Artesanal"><img src="images/404-whatsapp.png" alt=""></a>
-    </footer>
+      </footer>
+    <!-- Script Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <!-- Script JS para bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
     <!-- Mi javascript -->
     <script src="js/simuladorUsuario.js"></script>
+    <script src="js/api.js"></script>
 </body>
 </html>

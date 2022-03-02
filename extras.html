@@ -32,7 +32,7 @@
         </div>
       </nav>
 </header>
-    <main>
+    <main class="container">
         <section class="title">
             <h1>El Artesanal, servicios extras</h1>
         </section>
@@ -40,13 +40,27 @@
             <h2>Otros servicios</h2>
             <p>Aparte de los menús diarios individuales y corporativos, El Artesanal ofrece un abanico de opciones para eventos y reuniones, como lo son pizzas, sandwiches de miga, patas y catering salados, aparte de sus picadas famosas en Alberdi.</p>
         </section>
-        <select name="Extras" id="seleccionarOpcion">
-          <option value="pizzaClasica">Pizza Clasica</option>
-          <option value="pizzaEspecial">Pizza Especial</option>
-          <option value="pataFlambeada">Pata Flambeada</option>
-          <option value="picadaCervecera">Picada Cervecera</option>
-          <option value="cateringSalado">Catering Salado</option>
+        <input id="eleccion" type="text" class="input" placeholder="Que estas buscando?">
+        <button id="btncart"><img src="images/059-cart.png"><span id="numerito">0</span></button>
+        <br>
+        <select name="extras" id="seleccionarOpcion">
+          <option value="Todos"></option>
+          <option value="Pizza Clasica">Pizza Clasica</option>
+          <option value="Pizza Especial">Pizza Especial</option>
+          <option value="Pata Flambeada">Pata Flambeada</option>
+          <option value="Picada Cervecera">Picada Cervecera</option>
+          <option value="Catering Salado">Catering Salado</option>
         </select>
+        <section id="extrasCards" class="row">
+          <!-- Aca iran las cards -->
+        </section>
+        <div class="carrito row">
+            <h3 class="col-3">Carrito</h3>
+            <div class="col-5" id="carroExtras">
+                <!-- Aca iran los productos -->
+            </div>
+        </div>
+        <h5 class="precioProducto row">Precio total: $<span id="total-extras">0</span></h5>
     </main>
     <footer class="foot row">
       <nav class="navbar navbar-expand-lg navbar-dark col-lg-6">

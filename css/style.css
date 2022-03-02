@@ -22,6 +22,10 @@ a {
   padding: 10px;
   font-size: 48px;
 }
+.btn-primary {
+  background-color: white;
+  border: 2px solid white;
+}
 .row {
   margin: 40px 0;
   text-align: center;
@@ -41,4 +45,17 @@ form {
 }
 .titulo-carrito {
   margin-right: 50px;
+}
+.swal2-modal {
+  background: rgb(8, 8, 8)!important;
+  color: white;
+  }
+.confirmButton {
+  background-color: white;
+}
+.swal2-background {
+  background-color: white;
+}
+li {
+  list-style: none;
 }
