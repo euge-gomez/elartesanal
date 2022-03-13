@@ -15,7 +15,7 @@ function ingresar () {
     infodeUsuario.append(contenedorUsuario);
 }
 Swal.fire({
-    imageUrl: '../images/logo.jpg',
+    imageUrl: '../images/logo.jpeg',
     title: 'A prepararse para una experiencia Artesanal!',
   })
 

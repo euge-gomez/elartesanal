@@ -12,8 +12,8 @@
 </head>
 <body>
     <header class="head row justify-content-center">
-        <a class="logo col-lg-2" href="index.html"><img src="images/logo.jpg" alt="Logo de El Artesanal"></a>
-        <nav class="navbar navbar-expand-lg navbar-dark col-lg-5">
+        <a class="logo col-lg-2" href="index.html"><img class="img-thumbnail" src="images/logo.jpeg" alt="Logo de El Artesanal"></a>
+        <nav class="navbar navbar-expand-lg navbar-dark col-lg-10 align-items-right">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -33,7 +33,7 @@
           </nav>
     </header>
     <main class="container">
-      <h1 class="row">El Artesanal, comidas caseras</h1>
+      <h1>El Artesanal, comidas caseras</h1>
       <section class="row">
         <section class="col-6" id="userinfo">
           <h3>Tu información de usuario!</h3>
@@ -57,7 +57,7 @@
       </section>
       <section>
         <div class="row">
-          <h1 class="col-3">Como esta el clima hoy?</h1>
+          <h2 class="col-6">Te parece que el clima de hoy amerita un menú especial? <a href="https://api.whatsapp.com/send?phone=+5493517424704&text=Hola quiero cambiar mi menú de hoy">Escribinos!</a></h2>
           <form id="busquedaForm" class="col-3">
             <input id="busquedaInput" type="text" placeholder="Busca tu ciudad">
             <button type="submit">Buscar</button>
@@ -81,6 +81,7 @@
           <h2 class="col-lg-5">¿Dónde estamos?</h2>
           <p class="col-lg-6">El Artesanal, esta localizado en Alberdi a cuadras del centro, pero tiene gran zona de influencia y los extras planificados pueden ser solicitados de cualquier zona de la ciudad.</p>
       </section>
+    </main>
     <footer class="foot row">
         <nav class="navbar navbar-expand-lg navbar-dark col-lg-6">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -100,7 +101,7 @@
               </ul>
             </div>
           </nav>
-        <a class="col-lg-1 linkwa justify-content-center" href="https://api.whatsapp.com/send?phone=+5493517424704&text=Hola quiero conocer más sobre los servicios de El Artesanal"><img src="images/404-whatsapp.png" alt=""></a>
+        <a class="col-lg-6 linkwa d-flex justify-content-between" href="https://api.whatsapp.com/send?phone=+5493517424704&text=Hola quiero conocer más sobre los servicios de El Artesanal"><p class="linktxt">Por cualquier consulta o sugerencia escribinos!</p><img src="images/404-whatsapp.png" alt=""></a>
       </footer>
     <!-- Script Sweet Alert -->
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -111,4 +112,4 @@
     <script src="js/simuladorUsuario.js"></script>
     <script src="js/api.js"></script>
 </body>
-</html>
+</html> 

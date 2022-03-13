@@ -14,8 +14,8 @@
 </head>
 <body>
   <header class="head row justify-content-center">
-    <a class="logo col-lg-2" href="index.html"><img src="images/logo.jpg" alt="Logo de El Artesanal"></a>
-    <nav class="navbar navbar-expand-lg navbar-dark col-lg-5">
+    <a class="logo col-lg-2" href="index.html"><img class="img-thumbnail" src="images/logo.jpeg" alt="Logo de El Artesanal"></a>
+    <nav class="navbar navbar-expand-lg navbar-dark col-lg-10 align-items-right">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -29,18 +29,18 @@
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="extras.html">Otros Servicios</a>
-              </li>
+            </li>
           </ul>
         </div>
       </nav>
-  </header>
+</header>
   <main class="container">
-      <section class="title row">
-          <h1>El Artesanal, Menús Individuales</h1>
+      <section class="title">
+          <h1>El Artesanal Tu almuerzo diario</h1>
       </section>
       <section class="intro row">
         <h2>De qué se trata?</h2>
-        <p>Podes elegir tu menú o la cantidad que quieras indicandonós los números de opción y la dirección, un telefóno y horario de entrega y nosotros confirmamos tu pedido por Whatsapp y listo, a disfrutar de la comida casera!</p>
+        <p>Podes elegir tu menú o la cantidad de menués que quieras indicándonos los números de la opción elegida, tu dirección, un teléfono y horario de entrega. Nosotros confirmamos tu pedido por Whatsapp y listo, a disfrutar de la comida casera!</p>
         <h2>Nuestras opciones de menú son según el día de la semana probalas!</h2> 
       </section>
       <div id="cardsLunes" class="row">
@@ -101,14 +101,14 @@
           <img src="images/wokVegetyPollo.jpeg" class="card-img-top img-thumbnail" alt="foto del menu">
           <h5 class="card-title">Miercoles - Light</h5>
           <p class="card-text">Wok de verduras y pollo salteadas en salsa de soja</p>
-          <h6 class="card-title"> $300 </h6>
+          <h6 class="card-price"> $300 </h6>
           <button class="agregarMenu btn btn-primary"><img src="images/059-cart.png"></button>
         </div>
         <div class="card col-lg-3 card-body mx-2">
           <img src="images/tartaVerdu.jpeg" class="card-img-top img-thumbnail" alt="foto del menu">
           <h5 class="card-title">Miercoles - Vegetariano</h5>
           <p class="card-text">Tarta de verduras con ensalada</p>
-          <h6 class="card-title"> $300 </h6>
+          <h6 class="card-price"> $300 </h6>
           <button class="agregarMenu btn btn-primary"><img src="images/059-cart.png"></button>
         </div>
       </div>
@@ -174,15 +174,43 @@
           <button class="agregarMenu btn btn-primary"><img src="images/059-cart.png"></button>
         </div>
       </div>
-      <section id="carrito" class="carrito row">
-        <h2 class="titulo-carrito">Tu carrito!</h2>
-        <br>
-        <br>
-        <br>
-
+      <section class="carrito row">
+        <h2 class="titulo-carrito">Tu pedido:</h2>           
+          <table class="table table-dark">
+            <thead>
+              <tr>
+                <th>Pedido</th>
+                <th>Descripción</th>
+                <th>Cantidad</th>
+                <th>Precio</th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody id="carrito">
+              
+            </tbody>
+          </table>
       </section>
       <section class="total-carro row">
         <h3 class="col-6">Total Pedido: </h3><h3 id="carro-total" class="carro-total col-5">0</h3>
+          <!-- Button to Open the Modal -->
+          <button class="btn btn-primary ml-auto finalizarBtn" type="button" data-toggle="modal"  data-toggle="modal" data-target="#myModal">Comprar</button>
+          <!-- The Modal -->
+          <div class="modal" id="myModal">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <!-- Modal Header -->
+                <div class="modal-header">
+                  <h4 class="modal-title">Gracias por tu pedido</h4>
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <!-- Modal body -->
+                <div id="modal-body" class="modal-body">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
       </section>
   </main>
   <footer class="foot row">
@@ -204,7 +232,7 @@
           </ul>
         </div>
       </nav>
-      <a class="col-lg-1 linkwa justify-content-center" href="https://api.whatsapp.com/send?phone=17862013838&text=Hola quiero info"><img src="images/404-whatsapp.png" alt=""></a>
+    <a class="col-lg-6 linkwa d-flex justify-content-between" href="https://api.whatsapp.com/send?phone=+5493517424704&text=Hola quiero conocer más sobre los servicios de El Artesanal"><p class="linktxt">Por cualquier consulta o sugerencia escribinos!</p><img src="images/404-whatsapp.png" alt=""></a>
   </footer>
     <!-- Toastify -->
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>

@@ -30,8 +30,8 @@ opcionesExtras.addEventListener('change', ()=>{
     if (opcionesExtras.value == 'Todos'){
         armandoExtras(arrayExtras)
     }else {
-        armandoExtras(arrayExtras.filter(el=>el.subtipo == opcionesExtras.value))
-        console.log(arrayExtras.filter(el=>el.subtipo == opcionesExtras.value))
+        armandoExtras(arrayExtras.filter(el=>el.tipo == opcionesExtras.value))
+        console.log(arrayExtras.filter(el=>el.tipo == opcionesExtras.value))
     }
 });
 
@@ -51,18 +51,16 @@ function armandoExtras(array){
   for(const menuExtra of array) {
     let div = document.createElement('div')
     div.classList.add('menuExtra')
-    div.classList.add('row')
-    div.classList.add('d-*-inline-flex')
+    div.classList.add('col-2')
     div.innerHTML += `
-                <div class="card col-4">
+                <div class="card my-4">
                     <div class="card-image">
-                        <img class="img-fluid" src=${menuExtra.img}>
-                        <h3 class="card-title">${menuExtra.tipo} - ${menuExtra.subtipo}</h3>
-                        <a id="botonAgregar${menuExtra.id}"><img class="btn-primary" src="../images/059-cart.png"></a>
+                        <img class="img-fluid rounded m-3 w-75" src=${menuExtra.img}>
                     </div>
                     <div class="card-content">
+                        <h3 class="card-title">${menuExtra.tipo} - ${menuExtra.subtipo}</h3>
                         <p>Porciones: ${menuExtra.porciones}</p>
-                        <h3> $${menuExtra.precio}</h3>
+                        <h3> $${menuExtra.precio}</h3><a id="botonAgregar${menuExtra.id}"><img class="btn-primary" src="../images/059-cart.png"></a>
                     </div>
                 </div> `
     contenedorCardsExtras.append(div);
@@ -70,7 +68,7 @@ function armandoExtras(array){
     //Aca trabajamos con el boton que cargara el menu extra al carro
     let clickAgregar = document.getElementById(`botonAgregar${menuExtra.id}`);
     clickAgregar.addEventListener('click', ()=>{
-      cargarExtra(menuExtra.id)
+      cargarExtra(menuExtra.id);
     });
   }
 }
@@ -90,19 +88,21 @@ function cargarExtra(id) {
         let carro = document.createElement('div')
         carro.className = 'extraEnCarro'
         carro.innerHTML =`
-                    <div class="card align-items-center">
+                    <div class="align-items-center m-2">
                         <h5 class="mx-3">${agregarExtra.tipo} ${agregarExtra.subtipo} - Precio: $${agregarExtra.precio}</h5>
                         <p class="mx-4" id="cantidad${agregarExtra.id}">Cantidad:${agregarExtra.cantidad}</p>
                         <button id=botonEliminar${agregarExtra.id} class="btn-primary w-25"><img src="../images/272-cross.png"></button>
                     </div>
         `
         seleccionadosExtras.append(carro)
+
         //Aca trabajamos en darle la chance al usuario a eliminar productos de su carro
         let botonEliminarExtras = document.getElementById(`botonEliminar${agregarExtra.id}`)
         botonEliminarExtras.addEventListener('click',()=>{
             botonEliminarExtras.parentElement.remove()                         
             carritoExtras = carritoExtras.filter(elemento => elemento.id != agregarExtra.id)
             actualizarCarroExtras()
+
             //Aca le pedimos que nos guarde el array del carrito seleccionado cuando eliminen
             localStorage.setItem('carrito', JSON.stringify(carritoExtras))
         })
@@ -111,7 +111,7 @@ function cargarExtra(id) {
     localStorage.setItem('carrito', JSON.stringify(carritoExtras))
 }   
 
-//Aca le vamos diciendo que ante los cambios reaccione actualizando el valor total del pedido
+//Aca le vamos diciendo que ante los cambios reaccione actualizando el valor total del pedido y el numerito del carro
 function  actualizarCarroExtras (){
     numeritoCarro.innerText = carritoExtras.reduce((acc,el)=> acc + el.cantidad, 0)
     carroTotal.innerText = carritoExtras.reduce((acc,el)=> acc + (el.precio * el.cantidad), 0)
